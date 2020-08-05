@@ -1,0 +1,82 @@
+.modalTopRow {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-column-gap: 16px;
+}
+
+.photoCamera {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 384px;
+  height: 100%;
+
+  background-color: #000;
+}
+
+.previewImageWrapper {
+  position: relative;
+
+  width: 100%;
+  
+  text-align: center;
+
+  color: #fff;
+}
+
+.photoTipLabel {
+  display: none;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.previewImageWrapper:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, .8);
+  opacity: 0;
+
+  transition: .3s;
+  cursor: pointer;
+  content: "Сделать снимок заново.";
+}
+
+.previewImageWrapper:hover:before {
+  opacity: 1;
+}
+
+.previewImageWrapper img {
+  width: 100%;
+}
+
+.popupMessage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 80%;
+
+  text-align: center;
+
+  transform: translate(-50%, -50%);
+}
+
+@media all and (max-width: 800px) {
+  .modalTopRow {
+    grid-template-columns: none;
+    grid-column-gap: none;
+    grid-row-gap: 16px;
+  }
+
+  .photoTipLabel {
+    display: block;
+  }
+}

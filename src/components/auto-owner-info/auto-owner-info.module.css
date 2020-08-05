@@ -1,0 +1,20 @@
+.table {
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+.table td {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.table td:first-of-type {
+  width: 45%;
+  color: #898989;
+}
+
+@media all and (max-width: 512px) {
+  .table td {
+    display: block;
+  }
+}

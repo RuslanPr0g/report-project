@@ -1,0 +1,68 @@
+.modal {
+  --button-close-size: 32px;
+  --button-close-padding: 6px;
+
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  overflow: scroll;
+  display: none;
+  height: 100vh;
+
+  background-color: #fff;
+}
+
+.modal.open {
+  display: block;
+}
+
+.closeButton {
+  position: absolute;
+  top: var(--button-close-padding);
+  right: var(--button-close-padding);
+
+  width: 32px;
+  height: 32px;
+  border: none;
+
+  background: none;
+
+  transition: .3s;
+}
+
+.closeButton:hover {
+  opacity: .6;
+}
+
+.spinnerWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #fff;
+}
+
+.spinnerWrapper img {
+  width: 24px;
+  height: 24px;
+}
+
+.contentWrapper {
+  padding: 16px calc(var(--button-close-size) + var(--button-close-padding) + var(--button-close-padding));
+}
+
+@media all and (max-width: 800px) {
+  .contentWrapper {
+    padding: calc(var(--button-close-size) + var(--button-close-padding) + var(--button-close-padding)) 16px;
+  }
+}

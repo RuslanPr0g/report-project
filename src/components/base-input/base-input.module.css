@@ -1,0 +1,40 @@
+.wrapper {
+  position: relative;
+
+  display: inline-block;
+  padding: 18px 20px 6px;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 4px;
+  
+  font-size: 16px;
+  line-height: 18px;
+
+  background-color: #fff;
+  color: #000;
+}
+
+.placeholder {
+  position: absolute;
+  top: 4px;
+
+  font-size: 13px;
+  line-height: 14px;
+
+  color: #777777;
+}
+
+.input {
+  border: none;
+  outline: none;
+
+  font-size: 16px;
+  line-height: 18px;
+
+  background: transparent;
+}
+
+@media all and (max-width: 800px) {
+  .input {
+    width: 100%;
+  }
+}

@@ -1,0 +1,22 @@
+.button {
+  padding: 12px 21px;
+  border: none;
+  border-radius: 4px;
+  
+  font-size: 16px;
+  line-height: 18px;
+
+  background-color: #157ee1;
+  color: #fff;
+}
+
+.button img {
+  width: 18px;
+  height: 18px;
+}
+
+@media all and (max-width: 800px) {
+  .button {
+    width: 100%;
+  }
+}

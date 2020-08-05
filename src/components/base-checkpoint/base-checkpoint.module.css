@@ -1,0 +1,25 @@
+.checkpoint {
+  color: #c4c4c4;
+
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.checkpoint:before {
+  display: inline-block;
+  width: 13px;
+  margin-right: 2px;
+  
+  font-size: 16px;
+  line-height: 18px;
+
+  content: '×';
+}
+
+.checkpoint.completed {
+  color: #01944d;
+}
+
+.checkpoint.completed:before {
+  content: '✓';
+}

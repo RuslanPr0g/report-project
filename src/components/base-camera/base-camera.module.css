@@ -1,0 +1,62 @@
+.cameraWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-height: 512px;
+}
+
+.scatterGlWrapper {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  min-height: 320px;
+  height: 100%;
+  text-align: center;
+  background-color: #fff;
+}
+
+.buttonCapture {
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  transform: translateX(-50%);
+}
+
+.buttonCapture:hover {
+  background-color: #c4c4c4;
+}
+
+.cameraCanvas {
+  display: none;
+  width: 100%;
+}
+
+.cameraCanvas.inited {
+  display: block;
+}
+
+.cameraLabel {
+  width: 90%;
+  text-align: center;
+  color: #fff;
+}
+
+@media all and (max-width: 800px) {
+  .cameraWrapper {
+    max-height: unset;
+  }
+  .buttonCapture {
+    width: 90%;
+  }
+  .scatterGlWrapper {
+    position: static;
+    min-height: unset;
+  }
+  .scatterGlWrapper canvas {
+    width: 100% !important;
+  }
+}

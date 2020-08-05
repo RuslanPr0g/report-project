@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a:focus {
+  outline: none !important;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: rgb(245, 245, 245) !important;
+}
+.nav-item a {
+  padding: 12px;
+  margin-left: 12px;
+}
+.flex-column::-webkit-scrollbar {
+  width: 0 !important;
+}
+*:active {
+  border: none !important;
+}
+.mainColor {
+  color: rgb(36, 38, 41) !important;
+  display: block;
+  line-height: 1;
+  font-size: calc(7px + 9 * ((100vw - 320px) / 1043));
+}
+.nav-item a:hover {
+  color: rgb(116, 116, 116) !important;
+}
+a:focus {
+  border: none !important;
+}
+.disable {
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px !important;
+  color: grey !important;
+}
+.container {
+  max-width: 1440px !important;
+}
+.novetly {
+  color: rgb(246, 84, 88);
+  border-color: rgb(246, 84, 88);
+}
+.tab-pane {
+  margin-top: 20px;
+  margin-left: -10px;
+}
+.marginTop {
+  margin-top: 45px !important;
+}
+.nav {
+  width: 20%;
+  flex-wrap: nowrap !important;
+  border-right: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+}
+.flex-column {
+  position: fixed;
+  height: 95vh;
+  overflow-y: auto;
+  border-right: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+}
+.col-sm-9,
+.col-sm-3 {
+  padding-left: 0 !important;
+}
