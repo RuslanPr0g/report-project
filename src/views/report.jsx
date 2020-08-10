@@ -1,4 +1,4 @@
-import React from "../../node_modules/react";
+import React, {useState} from "../../node_modules/react";
 import {
   Tab,
   Container,
@@ -7,15 +7,20 @@ import {
   Col,
 } from "../../node_modules/react-bootstrap";
 
-function hiddenBlock() {
-  document.getElementsByClassName("acccidentHiddenBlock1")[0].style.maxHeight =
-    "fit-content";
-  document.getElementsByClassName("acccidentHiddenBlock1")[0].style.display =
-    "block";
-}
+import HeaderNav from './header';
+
 function Report() {
+  const [setHeight, setHeightState] = useState("0px");
+  const [setActive, setActivetState] = useState("");
+  
+  function toggleAccordion(){
+    setHeightState(
+      setActive === "active" ? "0px" : "auto"
+    )
+  }
   return (
     <Container>
+      <HeaderNav />
       <Tab.Container id="ledt-tabs-example" defaultActiveKey="first">
         <Row>
           <Col sm={3} className="border-menu">
@@ -100,7 +105,7 @@ function Report() {
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link className="mainColor" eventKey="sixteenth">
-                  Телефон
+                  Телефон<span class="soon">Скоро</span>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
@@ -110,12 +115,12 @@ function Report() {
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link className="mainColor" eventKey="eighteenth">
-                  Фотографии
+                  Фотографии<span class="soon">Скоро</span>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link className="mainColor" eventKey="nineteenth">
-                  Новости и сообщения в СМИ
+                  Новости и сообщения в СМИ<span class="soon">Скоро</span>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
@@ -153,17 +158,17 @@ function Report() {
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link className="mainColor" eventKey="twenty-sixth">
-                  Страхование
+                  Страхование<span class="soon">Скоро</span>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link className="mainColor" eventKey="twenty-seventh">
-                  Фотографии транспорта
+                  Фотографии транспорта<span class="soon">Скоро</span>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link className="mainColor" eventKey="twenty-eighth">
-                  Отзывы и рейтинг модели
+                  Отзывы и рейтинг модели<span class="soon">Скоро</span>
                 </Nav.Link>
               </Nav.Item>
             </Nav>
@@ -171,78 +176,38 @@ function Report() {
           <Col sm={9}>
             <Tab.Content>
               <Tab.Pane eventKey="first">
-                <div className="infoAutoHead" id="infoAuto">
-                  <h2>Иванов Иван Викторович</h2>
-                  <div className="divFlex">
+              <div className="infoAutoHead" id="infoAuto">
+                <h2>Иванов Иван Викторович</h2>
+                <div className="divFlex">
                     <div>
-                      <table>
-                        <tbody>
-                          <tr>
-                            <td>Возраст</td>
-                            <td>21 год</td>
-                          </tr>
-                          <tr>
-                            <td>Дата рождения</td>
-                            <td>12.12.2012</td>
-                          </tr>
-                          <tr>
-                            <td>Национальность</td>
-                            <td>Русский</td>
-                          </tr>
-                          <tr>
-                            <td>Гражданство</td>
-                            <td>РФ</td>
-                          </tr>
-                          <tr>
-                            <td>Прочие данные</td>
-                            <td>
-                              Рекомендуем перед покупкой автомобиля купить отчёт
-                              повторно, чтобы получить актуальную информацию.
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                        <table>
+                            <tbody><tr>
+                                <td>Возраст</td>
+                                <td>21 год</td>
+                            </tr>
+                            <tr>
+                                <td>Дата рождения</td>
+                                <td>12.12.2012</td>
+                            </tr>
+                            <tr>
+                                <td>Национальность</td>
+                                <td>Русский</td>
+                            </tr>
+                            <tr>
+                                <td>Гражданство</td>
+                                <td>РФ</td>
+                            </tr>
+                            <tr>
+                                <td>Прочие данные</td>
+                                <td>Рекомендуем перед покупкой автомобиля купить отчёт повторно, чтобы получить актуальную информацию.</td>
+                            </tr>
+                        </tbody></table>
                     </div>
-                  </div>
+                    <div className="photoInfo">
+                        <img src='https://avatars.mds.yandex.net/get-pdb/1365420/73e5ed12-ee7b-4dcd-a3cd-5658734827d9/s1200?webp=false'></img>
+                    </div>
                 </div>
-                <div id="summaryLinks">
-                  <h3 className="summaryItem">Сводка по автомобилю</h3>
-                  <div className="summaryItem">
-                    <a href="#" className="linkYellow">
-                      Обнаружены ограничения
-                    </a>
-                    <a href="#" className="linkYellow">
-                      2 кузовных ремонта
-                    </a>
-                    <a href="#" className="linkYellow">
-                      Обнаружен залог
-                    </a>
-                    <a href="#" className="linkRed">
-                      Оценка на аукц ионе аварийных автомобилей
-                    </a>
-                    <a href="#" className="linkGreen">
-                      Сведения о розыске не обнаружены
-                    </a>
-                    <a href="#" className="linkGreen">
-                      Последнее показание пробега 101 040 км
-                    </a>
-                    <a href="#" className="linkYellow">
-                      4 владельца
-                    </a>
-                    <a href="#" className="linkYellow">
-                      Регистрация на юрлицо
-                    </a>
-                    <a href="#" className="linkRed">
-                      Обнаружено 2 ДТП
-                    </a>
-                    <a href="#" className="linkYellow">
-                      Пробег мог быть скручен
-                    </a>
-                    <a href="#" className="linkYellow">
-                      Обнаружено 2 расчёта ремонтных работ
-                    </a>
-                  </div>
-                </div>
+              </div>
               </Tab.Pane>
             </Tab.Content>
             <Tab.Content>
@@ -386,13 +351,13 @@ function Report() {
                           </div>
                           <div className="tableTd">
                             <span className="viewMoreBlock">
-                              <span className="viewMore" onClick={hiddenBlock}>
+                              <span className="viewMore" onClick={toggleAccordion}>
                                 Подробнее
                               </span>
                             </span>
                           </div>
                         </div>
-                        <div className="acccidentHiddenBlock acccidentHiddenBlock1">
+                        <div style={{ maxHeight: `${setHeight}` }} className="acccidentHiddenBlock">
                           <div className="tableTr">
                             <div className="tableTd">
                               Состояние ТС после ДТП
@@ -538,11 +503,11 @@ function Report() {
                           </div>
                           <div className="tableTd">
                             <span className="viewMoreBlock">
-                              <span className="viewMore">Подробнее</span>
+                              <span className="viewMore" onClick={toggleAccordion}>Подробнее</span>
                             </span>
                           </div>
                         </div>
-                        <div className="acccidentHiddenBlock acccidentHiddenBlock2">
+                        <div style={{ maxHeight: `${setHeight}` }} className="acccidentHiddenBlock">
                           <div className="tableTr">
                             <div className="tableTd">
                               Состояние ТС после ДТП
@@ -900,11 +865,11 @@ function Report() {
                         <div className="tableTd" aria-label="Источник">
                           Дилер, Москва{" "}
                           <span className="viewMoreBlock">
-                            <span className="viewMore">Подробнее</span>
+                            <span className="viewMore" onClick={toggleAccordion}>Подробнее</span>
                           </span>
                         </div>
                       </div>
-                      <div className="acccidentHiddenBlock">
+                      <div className="acccidentHiddenBlock" style={{ maxHeight: `${setHeight}` }}>
                         <p>
                           Приводной вал снять/установить, ШРУС снять/установить
                         </p>
@@ -936,11 +901,11 @@ function Report() {
                         <div className="tableTd" aria-label="Источник">
                           Дилер, Москва{" "}
                           <span className="viewMoreBlock">
-                            <span className="viewMore">Подробнее</span>
+                            <span className="viewMore" onClick={toggleAccordion}>Подробнее</span>
                           </span>
                         </div>
                       </div>
-                      <div className="acccidentHiddenBlock">
+                      <div style={{ maxHeight: `${setHeight}` }} className="acccidentHiddenBlock">
                         <p>
                           Брызговики передние установка, Установка сигнализации,
                           Сетка защитная в бампер - установка, Парктроник -
@@ -1041,13 +1006,13 @@ function Report() {
                           </div>
                           <div className="tableTd">
                             <span className="viewMoreBlock">
-                              <span className="viewMore" onClick={hiddenBlock}>
+                              <span className="viewMore" onClick={toggleAccordion}>
                                 Подробнее
                               </span>
                             </span>
                           </div>
                         </div>
-                        <div className="acccidentHiddenBlock acccidentHiddenBlock1">
+                        <div style={{ maxHeight: `${setHeight}` }} className="acccidentHiddenBlock">
                           <div className="tableTr">
                             <div className="tableTd">
                               Состояние ТС после ДТП
@@ -1193,11 +1158,11 @@ function Report() {
                           </div>
                           <div className="tableTd">
                             <span className="viewMoreBlock">
-                              <span className="viewMore">Подробнее</span>
+                              <span className="viewMore" onClick={toggleAccordion}>Подробнее</span>
                             </span>
                           </div>
                         </div>
-                        <div className="acccidentHiddenBlock acccidentHiddenBlock2">
+                        <div style={{ maxHeight: `${setHeight}` }} className="acccidentHiddenBlock">
                           <div className="tableTr">
                             <div className="tableTd">
                               Состояние ТС после ДТП
@@ -2106,7 +2071,7 @@ function Report() {
                           </div>
                           <div className="tableTd">
                             <span className="viewMoreBlock">
-                              <span className="viewMore" onClick={hiddenBlock}>
+                              <span className="viewMore" onClick={toggleAccordion}>
                                 Подробнее
                               </span>
                             </span>

@@ -3,6 +3,7 @@ import './App.css';
 import Home from './views/home'
 import Review from './views/review'
 import Report from './views/report'
+import Mainpage from './views/mainpage'
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,6 +15,9 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
+          <Route path="/mainpage">
+            <Mainpage />
+          </Route>
           <Route path="/review">
             <Review />
           </Route>

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import AutoCheckBlock from '../components/auto-check-block/auto-check-block' 
+import AutoCheckBlock from '../components/auto-check-block/auto-check-block';
 
 const Home = () => {
   return (

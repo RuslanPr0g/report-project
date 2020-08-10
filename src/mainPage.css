@@ -1,0 +1,105 @@
+body {
+    background-position: left top;
+    background-attachment: scroll;
+    background-image: url(https://static.tildacdn.com/tild3337-3537-4931-b734-396134383265/keyrate_24072020.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+}
+.headerNav {
+    background: none!important;
+}
+.main-page {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+.main-page__content {
+    margin-top: -4vh;
+    margin-left: 44px;
+}
+.main-page__content ul {
+    margin-right: 5vw;
+}
+.main-page__content a {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.45);
+}
+.main-page__content p {
+    margin-top: 3vh;
+    font-family: Arial,sans-serif;
+    margin-bottom: 3vh;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.85);
+}
+.main-page__content h1 {
+    font-family: 'Stem',sans-serif;
+    line-height: 1.2;
+    font-weight: 500;
+    font-size: 63px;
+    color: #fff;
+}
+.main-page__content input[type="text"]{
+    margin-bottom: 3vh;
+    padding-left: 0.5vw;
+    width: 25.3vw;
+    height: 5.5vh;
+    border-radius: 4px;
+    background-color: #ffffff;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+    box-shadow: 1px 1px 10px 1px rgba(153,153,153,0.4);
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 1.4;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    ul {
+        background: black!important;
+    }
+    body {
+        background: black!important;
+        overflow-y: auto!important;
+    }
+    h1 {
+        font-size: 48px!important;
+    }
+    .headerNav {
+        width: 100%;
+        text-align: center;
+        padding: 40px 0;
+        height: auto;
+    }
+    .headerNav ul li {
+        margin: 25px;
+        padding: 0;
+        display: block;
+    }
+    .divFlex {
+        display: block!important;
+    }
+    .main-page {
+        
+        display: block;
+        height: auto;
+    }
+    .main-page__content input[type="text"]{
+        width: 100%;
+    }
+    .container {
+        width: 90%!important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+    .main-page__list {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+    .main-page__content {
+        margin-top: 0;
+        margin-left: 0;
+        text-align: center;
+    }
+}
